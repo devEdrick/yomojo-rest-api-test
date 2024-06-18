@@ -44,8 +44,8 @@ class TokenManager
     {
         $response = Http::asJson()->post("{$this->baseUrl}/oauth/token", [
             'grant_type' => 'password',
-            'client_id' => config('services.passport.client_id'),
-            'client_secret' => config('services.passport.client_secret'),
+            'client_id' => config('passport.password_access_client.id'),
+            'client_secret' => config('passport.password_access_client.secret'),
             'username' => $username,
             'password' => $password,
             'scope' => '',
