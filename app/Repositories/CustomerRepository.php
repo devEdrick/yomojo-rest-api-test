@@ -55,10 +55,12 @@ class CustomerRepository implements CustomerRepositoryInterface
         $customer = $this->find($id);
 
         if ($customer) {
-            $customer->update($data);
+            if ($customer->update($data)) {
+                return $customer->fresh();
+            }
         }
 
-        return $customer;
+        return null;
     }
 
     /**

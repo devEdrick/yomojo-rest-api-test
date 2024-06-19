@@ -271,7 +271,7 @@ class CustomerController extends Controller
             return ResponseHelper::error404('Customer update failed.');
         }
 
-        return ResponseHelper::success(new CustomerResource($customer), 'Customer updated successfully.');
+        return ResponseHelper::success(new CustomerResource($updated), 'Customer updated successfully.');
     }
 
 
