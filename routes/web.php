@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CustomerController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 
@@ -24,8 +25,4 @@ Route::middleware(['auth'])->group(function () {
     Route::get('customers/{customer}/edit', [CustomerController::class, 'edit'])->name('customers.edit');
     Route::put('customers/{customer}', [CustomerController::class, 'update'])->name('customers.update');
     Route::delete('customers/{customer}', [CustomerController::class, 'destroy'])->name('customers.destroy');
-});
-
-Route::get('apidoc', function(){
-    return File::get(public_path() . '/apidoc/index.html');
 });

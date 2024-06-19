@@ -4,6 +4,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\CustomerController;
+use App\Http\Controllers\Api\OAuthController;
+
+Route::post('/oauth/token', [OAuthController::class, 'issueToken'])->name('api.oauth.token');;
 
 Route::middleware('auth:api')->group(function () {
     Route::get('customers', [CustomerController::class, 'index']);

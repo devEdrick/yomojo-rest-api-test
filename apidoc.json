@@ -1,26 +1,25 @@
 {
-    "name": "Customer Management API Documentation",
-    "version": "0.0.1",
-    "description": "API documentation for Customer Management.",
-    "title": "API Documentation",
-    "url": "http://localhost:8881",
-    "header": {
-      "title": "Header",
-      "content": ""
-    },
-    "footer": {
-      "title": "Footer",
-      "content": ""
-    },
-    "template": {
-      "withCompare": true,
-      "withGenerator": true,
-      "baseURL": "http://localhost:8881/apidoc/assets"
-    },
-    "sampleUrl": "http://localhost:8881",
-    "default": {
-      "base": "app/Http/Controllers/Api",
-      "url": "http://localhost:8881"
-    }
+  "name": "Customer Management API Documentation",
+  "version": "0.0.1",
+  "description": "API documentation for Customer Management.",
+  "title": "API Documentation",
+  "url": "http://localhost:8881",
+  "header": {
+    "title": "Header",
+    "content": ""
+  },
+  "footer": {
+    "title": "Footer",
+    "content": ""
+  },
+  "template": {
+    "withCompare": true,
+    "withGenerator": true,
+    "baseURL": "http://localhost:8881/apidoc/assets"
+  },
+  "sampleUrl": "http://localhost:8881",
+  "default": {
+    "base": "app/Http/Controllers/Api",
+    "url": "http://localhost:8881"
   }
-  
+}

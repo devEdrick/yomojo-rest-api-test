@@ -6,6 +6,7 @@ use App\Helpers\ResponseHelper;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 class ApiAuthMiddleware
@@ -17,6 +18,10 @@ class ApiAuthMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
+        if (Route::currentRouteName() === 'api.oauth.token') {
+            return $next($request);
+        }
+
         if (!Auth::guard('api')->check()) {
             return ResponseHelper::error401('Unauthorized.');
         }
