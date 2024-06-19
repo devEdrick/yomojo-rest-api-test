@@ -2,6 +2,13 @@
 ## Introduction
 This project is a simple Customer Management API built with Laravel. It supports basic CRUD operations on customer data and includes a web interface. The API is protected with Laravel Passport for OAuth authentication.
 
+## Prerequisites
+Before you begin, ensure you have the following installed:
+- PHP 8.2 or higher
+- MySQL 8 or compatible database
+- Node.js
+- npm (Node Package Manager)
+
 ## Installation
 Follow these steps to set up the project on your local machine:
 
